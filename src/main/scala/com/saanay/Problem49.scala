@@ -24,4 +24,12 @@ object Problem49 {
     c
   }
 
+  // find the idx of first occurrence
+  def strStr(haystack: String, needle: String): Int = {
+    val m = haystack.indices.filter {
+      i => haystack.slice(i, i + needle.length) == needle
+    }
+    if (m.nonEmpty) m(0) else -1
+  }
+
 }
