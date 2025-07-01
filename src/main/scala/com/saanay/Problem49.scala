@@ -32,4 +32,8 @@ object Problem49 {
     if (m.nonEmpty) m(0) else -1
   }
 
+  // valid anagram
+  def isAnagram(s: String, t: String): Boolean = {
+    s.sorted == t.sorted
+  }
 }
