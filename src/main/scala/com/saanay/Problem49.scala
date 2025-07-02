@@ -36,4 +36,11 @@ object Problem49 {
   def isAnagram(s: String, t: String): Boolean = {
     s.sorted == t.sorted
   }
+
+  // repeated substring pattern
+  def repeatedSubstringPattern(s: String): Boolean = {
+    (1 to s.length / 2).exists { n =>
+      s.grouped(n).toList.distinct.size == 1
+    }
+  }
 }
