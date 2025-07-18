@@ -43,4 +43,17 @@ object Problem49 {
       s.grouped(n).toList.distinct.size == 1
     }
   }
+
+  // move zeros
+  def moveZeroes(nums: Array[Int]): Unit = {
+    for (t <- 0 until nums.size - 1) {
+      for (i <- nums.indices) {
+        if (nums(i) == 0 && i < nums.size - 1) {
+          val temp = nums(i + 1)
+          nums(i + 1) = 0
+          nums(i) = temp
+        }
+      }
+    }
+  }
 }
